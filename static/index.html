@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent AI Content Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="container">
+    <header class="hero">
+        <div class="badge">AI / Gen AI Project</div>
+        <h1>Intelligent Content Generator</h1>
+        <p>Generate professional AI text and a matching visual from one simple input.</p>
+    </header>
+
+    <section class="card">
+        <h2>Content Settings</h2>
+
+        <label for="topic">Topic</label>
+        <textarea id="topic" placeholder="e.g. The future of AI in education"></textarea>
+
+        <div class="grid">
+            <div>
+                <label for="tone">Tone</label>
+                <select id="tone">
+                    <option>Professional</option>
+                    <option>Casual</option>
+                    <option>Friendly</option>
+                    <option>Educational</option>
+                    <option>Persuasive</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="contentLength">Content Length</label>
+                <select id="contentLength">
+                    <option>Short</option>
+                    <option selected>Medium</option>
+                    <option>Long</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="visualStyle">Visual Style</label>
+                <select id="visualStyle">
+                    <option>Realistic</option>
+                    <option>3D</option>
+                    <option>Minimal</option>
+                    <option>Cinematic</option>
+                    <option>Illustration</option>
+                </select>
+            </div>
+        </div>
+
+        <button id="generateButton" onclick="generateContent()">
+            Generate Content
+        </button>
+    </section>
+
+    <section class="card">
+        <div class="section-title">
+            <h2>AI Pipeline</h2>
+            <span id="status" class="status">Ready</span>
+        </div>
+
+        <div class="pipeline">
+            <div id="step1" class="step"><b>1</b><span>Generating Content</span></div>
+            <div id="step2" class="step"><b>2</b><span>Validating</span></div>
+            <div id="step3" class="step"><b>3</b><span>Image Prompt</span></div>
+            <div id="step4" class="step"><b>4</b><span>Generating Image</span></div>
+            <div id="step5" class="step"><b>5</b><span>Completed</span></div>
+        </div>
+    </section>
+
+    <div id="error" class="error"></div>
+
+    <section id="result" class="results">
+        <article class="card">
+            <h2>Generated Content</h2>
+            <div id="generatedText" class="generated-text"></div>
+        </article>
+
+        <article class="card">
+            <h2>Generated Image</h2>
+            <img id="generatedImage" alt="AI generated visual">
+        </article>
+
+        <article class="card">
+            <h2>Generated Image Prompt</h2>
+            <p id="imagePrompt" class="muted"></p>
+        </article>
+    </section>
+</main>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
